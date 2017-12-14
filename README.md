@@ -1,65 +1,110 @@
-# Forty - Jekyll Theme
+## Jasper2
 
-A Jekyll version of the "Forty" theme by [HTML5 UP](https://html5up.net/).  
+[![Build Status](https://travis-ci.org/myJekyll/jasper2.svg?branch=master)](https://travis-ci.org/myJekyll/jasper2)
+[![Ruby](https://img.shields.io/badge/ruby-2.4.2-blue.svg?style=flat)](http://travis-ci.org/myJekyll/jasper2)
+[![Jekyll](https://img.shields.io/badge/jekyll-3.6.2-blue.svg?style=flat)](http://travis-ci.org/myJekyll/jasper2)
 
-![Forty Theme](assets/images/forty.jpg "Forty Theme")
+This is a full-featured port of Ghost's default theme [Casper](https://github.com/tryghost/casper)
+*v2.1.7* for [Jekyll](https://jekyllrb.com/) / [GitHub Pages](https://pages.github.com/).
 
-# How to Use
+## Live Demo
 
-For those unfamiliar with how Jekyll works, check out [jekyllrb.com](https://jekyllrb.com/) for all the details, 
-or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/), 
-and [creating pages](https://jekyllrb.com/docs/pages/).
+[Ghost's Casper](https://demo.ghost.io) // [Jasper2](https://myJekyll.github.io/jasper2)
 
-- **GitLab**: Simply fork this repository and start editing the `_config.yml` file!  
-- **GitHub**: Fork this reposity and create a branch named `gh-pages`, then start editing the `_config.yml` file! The `.gitlab-ci.yml` file is only needed for GitLab Pages, so feel free to delete this if you are using GitHub instead.
+![home page](https://raw.githubusercontent.com/myJekyll/jasper2/master/assets/screenshot-desktop.jpg)
 
-# Added Features
 
-* **[Formspree.io](https://formspree.io/) contact form integration** - just add your email to the `_config.yml` and it works!
-* Use `_config.yml` to **set whether the homepage tiles should pull pages or posts**, as well as how many to display.
-* Add your **social profiles** easily in `_config.yml`. Only social profiles buttons you enter in `config.yml` show up on the site footer!
-* Set **featured images** in front matter.
+## Features
 
-# Credits
+* Out of the box support for multiple authors (via `_data/authors.yml`)
+* Full author information including: picture, bio, website, twitter, facebook, etc.
+* Tag description(s) and personalised covers (via `_data/tags.yml`)
+* Related posts view at the bottom of each post
+* All Ghost default pages: Author page(s), Tag page(s), About page(s), 404, etc.
+* Pagination (infinite scrolling or standard pagination, i.e. posts across multiple pages)
+* Atom Feeds by [Jekyll-feed](https://github.com/jekyll/jekyll-feed)
+* Toggleable subscribe button (requires an external service)
+* Code Syntax Highlight with [highlight.js](https://highlightjs.org/)
+* Support for Google Analytics tracking
+* Support for Disqus comments (not Ghost standard)
 
-Original README from HTML5 UP:
 
+## Getting Started
+
+### Deployment
+
+**Important:**  For security reasons, Github does not allow plugins (under `_plugins/`) when
+deploying with Github Pages. This means:
+
+**1)** that we need to generate your site locally (more details below) and push the resulting
+HTML (the contents of `_site/` or `../jasper2-pages/`) to a Github repository, that GitHub Pages
+then host;
+
+**2)** built the site with [travis-ci](https://travis-ci.org/) (with goodies from
+[jekyll-travis](https://github.com/mfenner/jekyll-travis)) automatically pushing the
+generated HTML files to a *gh-pages* branch.
+This later approach is the one I am currently using to generate the live demo.
+
+For option **1)** simply clone this repository (*master branch*), and then run
+`bundle exec jekyll serve` inside the directory. Upload the resulting `_site/` (or `../jasper2-pages/`)
+contents to your repository (*master branch* if uploading as your personal page
+(e.g. username.github.io) or *gh-pages branch* if uploading as a project page
+(as for the [demo](https://github.com/myJekyll/jasper2/tree/gh-pages)).
+
+For option **2)** you will need to set up travis-ci for your personal fork. Briefly all you
+need then is to change your details in *[\_config.yml](_config.yml)* so that you can push
+to your github repo. You will also need to generate a secure key to add to your
+*[.travis.yml](.travis.yml)* (you can find more info on how to do it in that file).
+Also make sure you read the documentation from
+[jekyll-travis](https://github.com/mfenner/jekyll-travis). This approach has clear
+advantages in that you simply push your file changes to GitHub and all the HTML files
+are generated for you and pushed to *gh-pages*. Also you get to know if everything is
+still fine with your site builds. Don't hesitate to contact me if you still have any
+issues (see below about issue tracking).
+
+### Author Pages
+
+In order to properly generate author pages you need to rename the field *categories* in the
+front matter of every post to match that of your each author *username* as defined
+in the *[\_data/authors.yml](_data/authors.yml)* file.
+With the latest update, multiple author blogs are now supported out of the box.
+
+### Compiling Styles
+
+Following on the way Casper styles are compiled as [described here](https://github.com/tryghost/casper#development):
+
+Jasper2 styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need Node and Gulp installed globally. After that, from the theme's root directory:
+
+```bash
+$ npm install
+$ gulp
 ```
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+
+## Issues and Contributing
+
+This install builds well with Ruby v2.4.2 and Jekyll v3.6.2. If you run into any problems
+please log them on the [issue tracker](https://github.com/myJekyll/jasper2/issues).
+
+Feel free pull-request your patches and fixes.
+
+## Thanks
 
 
-This is Forty, my latest and greatest addition to HTML5 UP and, per its incredibly
-creative name, my 40th (woohoo)! It's built around a grid of "image tiles" that are
-set up to smoothly transition to secondary landing pages (for which a separate page
-template is provided), and includes a number of neat effects (check out the menu!),
-extra features, and all the usual stuff you'd expect. Hope you dig it!
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
+Many thanks to the Ghost team for all the design work. Also many thanks to all contributors,
+that help keeping the project alive and updated :smile:
 
 
-Credits:
+## Copyright & License
 
-	Demo Images:
-		Unsplash (unsplash.com)
+Same licence as the one provided by Ghost's team. See Casper's theme [license](GHOST.txt).
 
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
+Copyright (C) 2015-2017 - Released under the MIT License.
 
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		background-size polyfill (github.com/louisremi)
-		Misc. Sass functions (@HugoGiraudel)
-		Respond.js (j.mp/respondjs)
-		Skel (skel.io)
-```
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Repository [Jekyll logo](https://github.com/jekyll/brand) icon licensed under a [Creative Commons Attribution 4.0 International License](http://choosealicense.com/licenses/cc-by-4.0/).
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
