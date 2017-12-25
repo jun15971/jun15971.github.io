@@ -15,21 +15,30 @@
 <div id="main" class="alt">
 
 <!-- One -->
-<section id="one">
-	<div class="inner">
+<section id="one" class="titles">
+	<div class="inner" >
                 {% for post in site.posts %}
-		<header class="major">
-      <h3><a href="{{ post.url  | relative_url }}" class="link">{{ post.title }}</a></h3>
-      <h4><a href="{{ post.url  | relative_url }}" class="link">{{ post.description }}</a></h4>
-      <!-- <p>{{ post.description }}</p> -->
+    <table>
+    <tr style=>
+    <td rowspan="2" style="width:200px"/>{% if post.image %}<img src="{{ site.baseurl }}/{{ post.image }}" alt="" style="width:200px"/>{% endif %}</td>
+    <td>
+      <header class="major">
+      <h6><a href="{{ post.url  | relative_url }}" class="link">{{ post.title }} {{ post.description }}</a></h6>
       {% if post.date %}<p>{{ post.date }}</p>{% endif %}
-    </header>
-		<!-- {% if post.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ post.image }}" alt="" /></span>{% endif %} -->
 
+    </header>
+    </td>
+    </tr>
+    </table>
 
                 {% endfor %}
 	</div>
 </section>
+
+
+
+
+
 
 </div>
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Python的各数据库用法
-description:
+title: Python对于各数据库的用法
+description: 调用MySQL数据库
 date: 2016-12-07 14:43:15 +0800
 image: assets/images/databaseicon.jpeg
 ---
