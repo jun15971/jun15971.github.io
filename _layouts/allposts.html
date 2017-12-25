@@ -12,7 +12,7 @@
 
 
 <!-- Main -->
-<div id="main" >
+<div id="main" class="alt">
 
 <!-- One -->
 <section id="one" class="titles">
@@ -20,14 +20,12 @@
                 {% for post in site.posts %}
     <table>
     <tr>
-    <td rowspan="3" style="width:200px"/>{% if post.image %}<img src="{{ site.baseurl }}/{{ post.image }}" alt=""/>{% endif %}</td>
+    <td style="width:100px"/>{% if post.image %}<img src="{{ site.baseurl }}/{{ post.image }}" alt=""/>{% endif %}</td>
     <td>
-      <a href="{{ post.url  | relative_url }}" class="link" style="text-align:center">{{ post.title }} {{ post.description }}</a>
+      <a href="{{ post.url  | relative_url }}" class="link">{{ post.title }} {{ post.description }}</a>
     </td>
     </tr>
-    <tr>
     <!-- <td>      {% if post.date %}<p>{{ post.date }}</p>{% endif %}</td> -->
-    </tr>
     </table>
                 {% endfor %}
 	</div>
