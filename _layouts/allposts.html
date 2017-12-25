@@ -12,32 +12,26 @@
 
 
 <!-- Main -->
-<div id="main" class="alt">
+<div id="main" >
 
 <!-- One -->
 <section id="one" class="titles">
-	<div class="inner" >
+	  <div class="inner" >
                 {% for post in site.posts %}
     <table>
-    <tr style=>
-    <td rowspan="2" style="width:200px"/>{% if post.image %}<img src="{{ site.baseurl }}/{{ post.image }}" alt="" style="width:200px"/>{% endif %}</td>
+    <tr>
+    <td rowspan="3" style="width:200px"/>{% if post.image %}<img src="{{ site.baseurl }}/{{ post.image }}" alt=""/>{% endif %}</td>
     <td>
-      <header class="major">
-      <h6><a href="{{ post.url  | relative_url }}" class="link">{{ post.title }} {{ post.description }}</a></h6>
-      {% if post.date %}<p>{{ post.date }}</p>{% endif %}
-
-    </header>
+      <a href="{{ post.url  | relative_url }}" class="link" style="text-align:center">{{ post.title }} {{ post.description }}</a>
     </td>
     </tr>
+    <tr>
+    <!-- <td>      {% if post.date %}<p>{{ post.date }}</p>{% endif %}</td> -->
+    </tr>
     </table>
-
                 {% endfor %}
 	</div>
 </section>
-
-
-
-
 
 
 </div>
