@@ -9,5 +9,3 @@ image:
 小伙伴中有对咖啡比较有研究的，所以一起去上海新开的号称世界最大的星巴克店观光了一番。
 
 <iframe height="498" width="510" src='https://player.youku.com/embed/XMzIzODU3OTExMg==' frameborder="0" allowfullscreen></iframe>
-
-<iframe height=498 width=510 src='https://player.youku.com/embed/XMzIzODU3OTExMg==' frameborder=0 'allowfullscreen'></iframe>
