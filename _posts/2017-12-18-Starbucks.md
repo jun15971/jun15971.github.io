@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Vlog】游览世界最大的星巴克主题馆
+title: 游览世界最大的星巴克主题馆
 description: 与小伙伴们的咖啡之旅
 date: 2017-12-18 09:34:19 +0800
 image: assets/images/biggeststarbucks.jpeg
