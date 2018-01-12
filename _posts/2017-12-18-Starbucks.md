@@ -3,7 +3,7 @@ layout: post
 title: 游览世界最大的星巴克主题馆
 description: 与小伙伴们的咖啡之旅
 date: 2017-12-18 09:34:19 +0800
-image: assets/images/biggeststarbucks.jpeg
+image: assets/images/thumbnail/starbucks.png
 ---
 
 小伙伴中有对咖啡比较有研究的，趁着周末我们一行三人去了在兴业太古汇新开的号称世界最大的星巴克店观光了一番。

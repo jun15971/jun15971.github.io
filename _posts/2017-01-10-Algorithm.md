@@ -3,7 +3,7 @@ layout: post
 title: Python打造推荐引擎
 description: 基于内容算法
 date: 2017-01-10 22:03:28 +0800
-image: assets/images/Algorithm.jpeg
+image: assets/images/thumbnail/Algorithm.png
 ---
 
 
