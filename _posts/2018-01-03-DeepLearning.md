@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gary Marcus提出对深度学习的系统性批判
-description: 机器之心译文
+description:
 date: 2018-01-03 21:13:41 +0800
 image: assets/images/thumbnail/DL.png
 ---
