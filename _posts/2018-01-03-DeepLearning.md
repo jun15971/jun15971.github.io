@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gary Marcus提出对深度学习的系统性批判
+title: Gary Marcus对深度学习的系统性批判及后续
 description:
 date: 2018-01-03 21:13:41 +0800
 image: assets/images/thumbnail/DL.png
